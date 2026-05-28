@@ -38,6 +38,7 @@ cdc-safe-async-fifo-sv/
 
   tb/
     tb_async_fifo.sv
+    async_fifo_assertions.sv
 
   docs/
     spec.md
@@ -299,6 +300,32 @@ Clean generated files:
 make clean
 ```
 
+
+
+## SystemVerilog Assertions
+
+The testbench includes additional assertion checks in:
+
+```text
+tb/async_fifo_assertions.sv
+```
+
+These assertions are used only for simulation and verification. They are not part of the synthesizable FIFO RTL.
+
+The assertion checks cover the following FIFO safety properties:
+
+| Assertion | Purpose |
+|---|---|
+| Gray pointer one-bit transition | Ensures Gray-coded pointers change by at most one bit per local clock cycle |
+| No write while full | Ensures the write pointer does not advance when the FIFO is full |
+| No read while empty | Ensures the read pointer does not advance when the FIFO is empty |
+| Write pointer increment | Ensures accepted writes increment the write pointer by one |
+| Read pointer increment | Ensures accepted reads increment the read pointer by one |
+| Pointer stability | Ensures pointers remain stable when no operation is accepted |
+
+These checks improve confidence in the FIFO control logic during reset, normal operation, full condition, empty condition, overflow, and underflow scenarios.
+
+
 ## Current Status
 
 | Item | Status |
@@ -319,7 +346,6 @@ make clean
 
 ## Future Work
 
-- Add SystemVerilog assertions for pointer and flag behavior.
 - Add cocotb randomized tests with a Python reference model.
 - Add programmable almost-full and almost-empty thresholds.
 - Add a synchronous-read memory variant for FPGA block RAM inference.
