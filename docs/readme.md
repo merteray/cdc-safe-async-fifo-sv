@@ -212,28 +212,28 @@ Key observations:
 The waveform below shows that data written into the FIFO is read back in the same order.  
 This confirms correct FIFO ordering behavior.
 
-![Basic write/read](docs/images/basic_write_read.png)
+![Basic write/read](images/basic_write_read.png)
 
 ### Gray Pointer Synchronization
 
 The waveform below shows local binary and Gray-coded pointers together with their synchronized versions in the opposite clock domains.  
 This demonstrates the CDC behavior of the design.
 
-![Gray pointer synchronization](docs/images/gray_pointer_sync.png)
+![Gray pointer synchronization](images/gray_pointer_sync.png)
 
 ### Full and Overflow Behavior
 
 The waveform below shows the FIFO reaching the full condition.  
 A write attempt while `full=1` is rejected (`wr_accept=0`) and `overflow` is asserted.
 
-![Full and overflow behavior](docs/images/full_overflow.png)
+![Full and overflow behavior](images/full_overflow.png)
 
 ### Empty and Underflow Behavior
 
 The waveform below shows the FIFO in the empty condition.  
 A read attempt while `empty=1` is rejected (`rd_accept=0`) and `underflow` is asserted.
 
-![Empty and underflow behavior](docs/images/empty_underflow.png)
+![Empty and underflow behavior](images/empty_underflow.png)
 
 
 ## Lint
