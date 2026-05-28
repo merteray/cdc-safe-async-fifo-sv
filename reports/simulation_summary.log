@@ -19,4 +19,4 @@ READ PASS: data=0x7 time=1201000
 Drain test passed.
 Underflow test passed.
 All sanity tests completed.
-tb/tb_async_fifo.sv:226: $finish called at 1412500 (1ps)
+tb/tb_async_fifo.sv:247: $finish called at 1412500 (1ps)

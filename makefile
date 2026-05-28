@@ -6,6 +6,7 @@ RTL = \
 	rtl/async_fifo.sv
 
 TB = \
+	tb/async_fifo_assertions.sv \
 	tb/tb_async_fifo.sv
 
 .PHONY: all sim lint waves clean reports

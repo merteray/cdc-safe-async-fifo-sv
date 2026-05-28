@@ -44,6 +44,27 @@ module tb_async_fifo;
     .underflow(underflow)
   );
 
+
+    async_fifo_assertions #(
+    .PTR_WIDTH(ADDR_WIDTH+1)
+  ) u_async_fifo_assertions (
+    .wr_clk    (wr_clk),
+    .wr_rst_n  (wr_rst_n),
+    .wr_en     (wr_en),
+    .full      (full),
+    .wr_accept (dut.wr_accept),
+    .wr_bin    (dut.wr_bin),
+    .wr_gray   (dut.wr_gray),
+
+    .rd_clk    (rd_clk),
+    .rd_rst_n  (rd_rst_n),
+    .rd_en     (rd_en),
+    .empty     (empty),
+    .rd_accept (dut.rd_accept),
+    .rd_bin    (dut.rd_bin),
+    .rd_gray   (dut.rd_gray)
+  );
+
   // Write clock: 100 MHz equivalent, 10 ns period
   initial wr_clk = 0;
   always #5 wr_clk = ~wr_clk;
