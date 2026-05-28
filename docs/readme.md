@@ -1,4 +1,5 @@
 # CDC-Safe Asynchronous FIFO in SystemVerilog
+**Status:** RTL simulation passing · Verilator lint passing · Waveform inspected · Assertion checks included
 
 ## Overview
 
