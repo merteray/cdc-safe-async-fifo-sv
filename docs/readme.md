@@ -1,5 +1,9 @@
 # CDC-Safe Asynchronous FIFO in SystemVerilog
-**Status:** RTL simulation passing · Verilator lint passing · Waveform inspected · Assertion checks included
+![Language](https://img.shields.io/badge/SystemVerilog-RTL-blue)
+![Simulation](https://img.shields.io/badge/Simulation-Passing-brightgreen)
+![Lint](https://img.shields.io/badge/Verilator%20Lint-Passing-brightgreen)
+![CDC](https://img.shields.io/badge/CDC-Gray%20Pointer%20Sync-purple)
+![License](https://img.shields.io/badge/License-MIT-yellow)
 
 ## Overview
 
