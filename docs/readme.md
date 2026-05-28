@@ -236,36 +236,36 @@ reports/verilator_lint.log
 
 ## How to Run
 
-### Compile
+## Quick Start
+
+Run simulation:
 
 ```bash
-iverilog -g2012 \
-  -o sim_async_fifo \
-  rtl/sync_2ff.sv \
-  rtl/fifo_mem.sv \
-  rtl/async_fifo.sv \
-  tb/tb_async_fifo.sv
+make sim
 ```
 
-### Run Simulation
+Run lint:
 
 ```bash
-vvp sim_async_fifo
+make lint
 ```
 
-### Open Waveform
+Generate reports:
 
 ```bash
-gtkwave dump.vcd
+make reports
 ```
 
-### Run Lint
+Open waveform:
 
 ```bash
-verilator --lint-only -Wall \
-  rtl/sync_2ff.sv \
-  rtl/fifo_mem.sv \
-  rtl/async_fifo.sv
+make waves
+```
+
+Clean generated files:
+
+```bash
+make clean
 ```
 
 ## Current Status
