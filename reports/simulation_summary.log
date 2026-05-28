@@ -1,0 +1,22 @@
+VCD info: dumpfile dump.vcd opened for output.
+Starting async FIFO sanity test...
+Reset test passed.
+READ PASS: data=0x11 time=401000
+READ PASS: data=0x22 time=451000
+READ PASS: data=0x33 time=501000
+Basic write/read test completed.
+Empty flag test passed.
+Full flag test passed.
+Overflow test passed.
+READ PASS: data=0x0 time=851000
+READ PASS: data=0x1 time=901000
+READ PASS: data=0x2 time=951000
+READ PASS: data=0x3 time=1001000
+READ PASS: data=0x4 time=1051000
+READ PASS: data=0x5 time=1101000
+READ PASS: data=0x6 time=1151000
+READ PASS: data=0x7 time=1201000
+Drain test passed.
+Underflow test passed.
+All sanity tests completed.
+tb/tb_async_fifo.sv:226: $finish called at 1412500 (1ps)

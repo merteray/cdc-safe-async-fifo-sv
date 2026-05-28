@@ -1,0 +1,19 @@
+# Simulation outputs
+sim_async_fifo
+dump.vcd
+*.vcd
+*.fst
+*.lxt
+*.lxt2
+
+# Verilator generated files
+obj_dir/
+
+# Editor / OS files
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.log.tmp
+*.tmp
